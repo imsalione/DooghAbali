@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="صفحه اصلی" Height="450" Width="800"
-        FlowDirection="RightToLeft"
+        FlowDirection="LeftToRight"
+        Icon="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\database.png"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="{x:Null}"
@@ -15,14 +16,15 @@
 
 
 
-    <Border CornerRadius="10"
+    <Border CornerRadius="5"
             BorderBrush="Black"
             BorderThickness="0">
 
         <Border.Background>
-            <ImageBrush ImageSource="/Images/background.png"
-                        Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\background2.png"
+                        Stretch="Fill"/>
         </Border.Background>
+        
 
         <Grid Margin="10">
             <!-- Window Row -->
@@ -41,7 +43,24 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- First Column -->
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
+                    <StackPanel Grid.Column="1" Margin="10">
+                        <Image x:Name="exit"
+                        MouseLeftButtonDown="exit_MouseLeftButtonDown"
+                        ToolTip="خروج از برنامه"
+                        Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\shutdown.png"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Margin="10">
+                        <Image x:Name="setting"
+                        ToolTip="تنظیمات"
+                        Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\Account Setting.png"/>
+                    </StackPanel>
+                </Grid>
 
                 <!-- Second Column -->
                 <TextBlock
@@ -89,8 +108,9 @@
 
                 <!-- ImSalione Logo -->
                 <Grid Grid.Column="2">
-                    <Image Source="/Images/imsalione.png" 
+                    <Image Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\imsalione.png" 
                        HorizontalAlignment="Right"
+                       MouseLeftButtonDown="Image_MouseLeftButtonDown"
                        VerticalAlignment="Stretch"
                        Margin="10"/>
                 </Grid>
@@ -98,9 +118,12 @@
                 <!-- Date Time -->
                 <Grid Grid.Column="0">
                     <TextBlock 
-                    Text="Date" 
+                    x:Name="datetime"
+                    FontFamily="IRANSansWeb(FaNum)"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
+                    Text="Date"
+                    Loaded="datetime_Loaded"
                     Margin="10"/>
                 </Grid>
 
