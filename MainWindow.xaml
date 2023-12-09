@@ -76,7 +76,7 @@
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 Text="اتوماسیون ثبت سفارش مشتریان"
-                FontSize="40"
+                FontSize="35"
                 Foreground="White"
                 FontWeight="ExtraBold"
                 FontFamily="IRANSansWeb(FaNum)"/>
@@ -95,30 +95,30 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <TextBlock
-                    Grid.Row="0"
-                    Grid.Column="1"
+                    Grid.Row="7"
+                    Grid.Column="2"
                     FlowDirection="RightToLeft"
-                    Text="موجودی انبار: "
+                    Text="موجودی انبار: 120.000 "
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
                     FontFamily="IRANSansWeb(FaNum)"
                     FontSize="15"/>
                 <TextBlock
-                    Grid.Row="0"
-                    Grid.Column="0"
+                    Grid.Row="7"
+                    Grid.Column="1"
                     FlowDirection="RightToLeft"
-                    Text="120.000"
+                    Text="در انتظار تایید: ۱۲۵.۴۵۰.۰۰۰ ریال"
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Right"
+                    HorizontalAlignment="Center"
                     FontFamily="IRANSansWeb(FaNum)"
                     FontSize="15"/>
             </Grid>
