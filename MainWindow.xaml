@@ -4,36 +4,47 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DooghAbali"
-        Icon= "/Images/database.png"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="صفحه اصلی" Height="450" Width="800"
         FlowDirection="RightToLeft"
-        ResizeMode="NoResize"
-        Background="#61b6e4">
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="{x:Null}"
+        ResizeMode="NoResize">
 
-    <Grid>
-        
-        <!-- Window Row -->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="120"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
-        
-        <!-- Title Row -->
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="120"/>
-            </Grid.ColumnDefinitions>
 
-            <!-- First Column -->
-            
-            
-            <!-- Second Column -->
-            <TextBlock
+
+    <Border CornerRadius="10"
+            BorderBrush="Black"
+            BorderThickness="0">
+
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/background.png"
+                        Stretch="UniformToFill"/>
+        </Border.Background>
+
+        <Grid Margin="10">
+            <!-- Window Row -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <!-- Title Row -->
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- First Column -->
+
+
+                <!-- Second Column -->
+                <TextBlock
                 Grid.Column="1"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
@@ -42,57 +53,58 @@
                 Foreground="White"
                 FontWeight="ExtraBold"
                 FontFamily="IRANSansWeb(FaNum)"/>
-            
-            <!-- Third Column -->
-            
-            
-        </Grid>
-        
-        <!-- Body Row -->
-        <Grid Grid.Row="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-        </Grid>
-        
-        <!-- Toolbar Row -->
-        <Border Grid.Row="2" Opacity="0.6" CornerRadius="5" Background="White" BorderBrush="White" BorderThickness="1" Margin="5"/>
 
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="150"/>
-            </Grid.ColumnDefinitions>
+                <!-- Third Column -->
 
-            <!-- ImSalione Logo -->
-            <Grid Grid.Column="2">
-                <Image Source="/Images/imsalione.png" 
+
+            </Grid>
+
+            <!-- Body Row -->
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <!-- Toolbar Row -->
+            <Border Grid.Row="2" Opacity="0.6" CornerRadius="5" Background="White" BorderBrush="White" BorderThickness="1" Margin="5"/>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- ImSalione Logo -->
+                <Grid Grid.Column="2">
+                    <Image Source="/Images/imsalione.png" 
                        HorizontalAlignment="Right"
                        VerticalAlignment="Stretch"
                        Margin="10"/>
-            </Grid>
-            
-            <!-- Date Time -->
-            <Grid Grid.Column="0">
-                <TextBlock 
-                    Text="Date" 
-                    Margin="2" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center"/>
-            </Grid>
+                </Grid>
 
+                <!-- Date Time -->
+                <Grid Grid.Column="0">
+                    <TextBlock 
+                    Text="Date" 
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="10"/>
+                </Grid>
+
+            </Grid>
         </Grid>
-    </Grid>
+    </Border>
 </Window>
