@@ -25,16 +25,12 @@
             BorderThickness="0">
 
         <Border.Background>
-            <ImageBrush ImageSource="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\background3.png"
+            <ImageBrush ImageSource="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\background.png"
                         Stretch="Fill"/>
         </Border.Background>
 
 
         <Grid Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="157*"/>
-                <ColumnDefinition Width="38*"/>
-            </Grid.ColumnDefinitions>
             <!-- Window Row -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="120"/>
@@ -87,10 +83,8 @@
             </Grid>
 
             <!-- Body Row -->
-            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -103,24 +97,87 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
+                <Border CornerRadius="5"
+                        x:Name="btnSubmitBorder"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        BorderBrush="White"
+                        Margin="5"
+                        BorderThickness="1">
+                    <Button Background="Transparent"
+                            BorderBrush="Transparent"
+                            BorderThickness="0"
+                            Content="ثبت سفارش جدید"
+                            FontFamily="IRANSansWeb(FaNum)"
+                            FontSize="15"
+                            Foreground="GhostWhite">
+                    </Button>
+                </Border>
+
+                <Border CornerRadius="5"
+                        x:Name="btnForceBorder"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        BorderBrush="White"
+                        Margin="5"
+                        BorderThickness="1">
+                    <Button Background="Transparent"
+                            BorderBrush="Transparent"
+                            BorderThickness="0"
+                            Content="لیست مشتریان"
+                            FontFamily="IRANSansWeb(FaNum)"
+                            FontSize="15"
+                            Foreground="GhostWhite">
+                    </Button>
+                </Border>
+
+                <Border CornerRadius="5"
+                        x:Name="btnCustomerBorder"
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        BorderBrush="White"
+                        Margin="5"
+                        BorderThickness="1">
+                    <Button Background="Transparent"
+                            BorderBrush="Transparent"
+                            BorderThickness="0"
+                            Content="گزارش فروش"
+                            FontFamily="IRANSansWeb(FaNum)"
+                            FontSize="15"
+                            Foreground="GhostWhite">
+                    </Button>
+                </Border>
+
                 <TextBlock
-                    Grid.Row="7"
-                    Grid.Column="2"
+                    Grid.Row="5"
+                    Grid.Column="1"
                     FlowDirection="RightToLeft"
                     Text="موجودی انبار: 120.000 "
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Left"
+                    HorizontalAlignment="Center"
                     FontFamily="IRANSansWeb(FaNum)"
-                    FontSize="15"/>
+                    FontSize="14"
+                    Foreground="GhostWhite"/>
                 <TextBlock
-                    Grid.Row="7"
-                    Grid.Column="1"
+                    Grid.Row="5"
+                    Grid.Column="2"
                     FlowDirection="RightToLeft"
                     Text="در انتظار تایید: ۱۲۵.۴۵۰.۰۰۰ ریال"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     FontFamily="IRANSansWeb(FaNum)"
-                    FontSize="15"/>
+                    FontSize="14"
+                    Foreground="GhostWhite"/>
+                <TextBlock
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    FlowDirection="RightToLeft"
+                    Text="ثبت سفارش امروز: ۲۳۰.۰۰۰.۰۰۰"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontFamily="IRANSansWeb(FaNum)"
+                    FontSize="14"
+                    Foreground="GhostWhite"/>
             </Grid>
 
             <!-- Toolbar Row -->
@@ -146,6 +203,7 @@
                 <Grid Grid.Column="2">
                     <TextBlock 
                     x:Name="datetime"
+                    Foreground="GhostWhite"
                     FontFamily="IRANSansWeb(FaNum)"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
