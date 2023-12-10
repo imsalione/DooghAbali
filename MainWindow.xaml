@@ -53,13 +53,13 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <StackPanel Grid.Column="1" Margin="10">
+                    <StackPanel Grid.Column="1" Margin="15">
                         <Image x:Name="exit"
                         MouseLeftButtonDown="exit_MouseLeftButtonDown"
                         ToolTip="خروج از برنامه"
                         Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\shutdown.png"/>
                     </StackPanel>
-                    <StackPanel Grid.Column="0" Margin="10">
+                    <StackPanel Grid.Column="0" Margin="15">
                         <Image x:Name="setting"
                         ToolTip="تنظیمات"
                         Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\Account Setting.png"/>
@@ -89,7 +89,6 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -102,7 +101,7 @@
                         Grid.Column="1"
                         Grid.Row="0"
                         BorderBrush="White"
-                        Margin="5"
+                        Margin="10"
                         BorderThickness="1">
                     <Button Background="Transparent"
                             BorderBrush="Transparent"
@@ -119,7 +118,7 @@
                         Grid.Column="1"
                         Grid.Row="1"
                         BorderBrush="White"
-                        Margin="5"
+                        Margin="10"
                         BorderThickness="1">
                     <Button Background="Transparent"
                             BorderBrush="Transparent"
@@ -136,7 +135,7 @@
                         Grid.Column="1"
                         Grid.Row="2"
                         BorderBrush="White"
-                        Margin="5"
+                        Margin="10"
                         BorderThickness="1">
                     <Button Background="Transparent"
                             BorderBrush="Transparent"
@@ -203,7 +202,7 @@
                 <Grid Grid.Column="2">
                     <TextBlock 
                     x:Name="datetime"
-                    Foreground="GhostWhite"
+                    Foreground="Black"
                     FontFamily="IRANSansWeb(FaNum)"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"

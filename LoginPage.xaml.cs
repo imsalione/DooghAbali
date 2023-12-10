@@ -24,37 +24,20 @@ namespace DooghAbali
             InitializeComponent();
         }
 
-        private void btnSubmitBorder_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (txtLogin.Password == "123456")
             {
-                this.Close();
-
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
+
+                this.Close();
             }
             else
             {
-                txtAttention.Text = "رمز ورود اشتباه است.";
                 txtLogin.IsTabStop = true;
                 txtLogin.SelectAll();
-            }
-        }
-
-        private void Button_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (txtLogin.Password == "123456")
-            {
-                this.Close();
-
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-            }
-            else
-            {
-                txtAttention.Text = "رمز ورود اشتباه است.";
-                txtLogin.IsTabStop = true;
-                txtLogin.SelectAll();
+                txtAttention.Text = "رمز ورود اشتباه است";
             }
         }
     }

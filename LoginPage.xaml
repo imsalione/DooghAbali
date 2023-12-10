@@ -67,8 +67,8 @@
                 Grid.Row="3"
                 FontFamily="IRANSansWeb(FaNum)"
                 TextAlignment="Center"
-                FontSize="8"
-                Foreground="MediumVioletRed"/>
+                FontSize="13"
+                Foreground="WhiteSmoke"/>
 
             <!--Login Button-->
             <Border CornerRadius="5"
@@ -77,7 +77,6 @@
                         Grid.Row="2"
                         BorderBrush="White"
                         Margin="5"
-                        MouseLeftButtonDown="btnSubmitBorder_MouseLeftButtonDown"
                         BorderThickness="1">
                 <Button Background="Transparent"
                         BorderBrush="Transparent"
@@ -85,7 +84,7 @@
                         Content="ورود"
                         FontFamily="IRANSansWeb(FaNum)"
                         FontSize="15"
-                        MouseLeftButtonDown="Button_MouseLeftButtonDown"
+                        Click="Button_Click"
                         Foreground="GhostWhite">
                 </Button>
             </Border>
