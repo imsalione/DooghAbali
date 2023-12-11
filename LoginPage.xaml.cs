@@ -30,15 +30,20 @@ namespace DooghAbali
             {
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
+                txtAttention.Text = "";
 
                 this.Close();
             }
             else
             {
-                txtLogin.IsTabStop = true;
-                txtLogin.SelectAll();
-                txtAttention.Text = "رمز ورود اشتباه است";
+                for (int i = 0; i < 3; i++)
+                {
+                    txtLogin.SelectAll();
+                    txtLogin.Focus();
+                    txtAttention.Text = "رمز ورود اشتباه است";
+                }
             }
+            
         }
     }
 }

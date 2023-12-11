@@ -68,7 +68,7 @@
                 FontFamily="IRANSansWeb(FaNum)"
                 TextAlignment="Center"
                 FontSize="13"
-                Foreground="WhiteSmoke"/>
+                Foreground="DarkOrange"/>
 
             <!--Login Button-->
             <Border CornerRadius="5"
@@ -78,14 +78,14 @@
                         BorderBrush="White"
                         Margin="5"
                         BorderThickness="1">
-                <Button Background="Transparent"
+                <Button Background="White"
                         BorderBrush="Transparent"
                         BorderThickness="0"
                         Content="ورود"
                         FontFamily="IRANSansWeb(FaNum)"
                         FontSize="15"
                         Click="Button_Click"
-                        Foreground="GhostWhite">
+                        Foreground="#4383c4">
                 </Button>
             </Border>
         </Grid>
