@@ -14,22 +14,17 @@
         Background="{x:Null}"
         ResizeMode="NoResize">
 
-
-
     <Border CornerRadius="5"
             x:Name="dragBorder"
             BorderBrush="Black"
-            MouseLeftButtonDown="dragBorder_MouseLeftButtonDown" 
-            MouseMove="dragBorder_MouseMove"
             Background="#00afef"
-            MouseLeftButtonUp="dragBorder_MouseLeftButtonUp"
             BorderThickness="0">
 
 
         <Grid Margin="10">
             <!-- Window Row -->
             <Grid.RowDefinitions>
-                <RowDefinition Height="120"/>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
@@ -52,14 +47,14 @@
 
                     <StackPanel Grid.Column="2" Margin="5">
                         <Image x:Name="exit"
-                        MouseLeftButtonDown="exit_MouseLeftButtonDown"
-                        ToolTip="خروج از برنامه"
-                        Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\shutdown.png"/>
+                                MouseLeftButtonDown="exit_MouseLeftButtonDown"
+                                ToolTip="خروج از برنامه"
+                                Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\shutdown.png"/>
                     </StackPanel>
                     <StackPanel Grid.Column="1" Margin="5">
                         <Image x:Name="setting"
-                        ToolTip="تنظیمات"
-                        Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\Account Setting.png"/>
+                            ToolTip="تنظیمات"
+                            Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\Account Setting.png"/>
                     </StackPanel>
                 </Grid>
 
@@ -86,6 +81,8 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -96,26 +93,28 @@
                 <Border CornerRadius="5"
                         x:Name="btnSubmitBorder"
                         Grid.Column="1"
-                        Grid.Row="0"
+                        Grid.Row="1"
                         BorderBrush="White"
-                        Margin="10"
+                        Margin="5"
                         BorderThickness="1">
                     <Button Background="Transparent"
                             BorderBrush="Transparent"
+                            x:Name="btnOrder"
                             BorderThickness="0"
                             Content="ثبت سفارش جدید"
                             FontFamily="IRANSansWeb(FaNum)"
                             FontSize="15"
-                            Foreground="GhostWhite">
+                            Foreground="GhostWhite"
+                            Click="btnOrder_Click">
                     </Button>
                 </Border>
 
                 <Border CornerRadius="5"
                         x:Name="btnForceBorder"
                         Grid.Column="1"
-                        Grid.Row="1"
+                        Grid.Row="2"
                         BorderBrush="White"
-                        Margin="10"
+                        Margin="5"
                         BorderThickness="1">
                     <Button Background="Transparent"
                             BorderBrush="Transparent"
@@ -130,9 +129,26 @@
                 <Border CornerRadius="5"
                         x:Name="btnCustomerBorder"
                         Grid.Column="1"
-                        Grid.Row="2"
+                        Grid.Row="3"
                         BorderBrush="White"
-                        Margin="10"
+                        Margin="5"
+                        BorderThickness="1">
+                    <Button Background="Transparent"
+                            BorderBrush="Transparent"
+                            BorderThickness="0"
+                            Content="محصولات"
+                            FontFamily="IRANSansWeb(FaNum)"
+                            FontSize="15"
+                            Foreground="GhostWhite">
+                    </Button>
+                </Border>
+
+                <Border CornerRadius="5"
+                        x:Name="btnProductBorder"
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        BorderBrush="White"
+                        Margin="5"
                         BorderThickness="1">
                     <Button Background="Transparent"
                             BorderBrush="Transparent"
@@ -174,6 +190,13 @@
                     FontFamily="IRANSansWeb(FaNum)"
                     FontSize="14"
                     Foreground="GhostWhite"/>
+
+                <StackPanel Grid.Row="2" Margin="20" Grid.Column="0" Grid.RowSpan="4">
+                    <Image Source="\Images\tashtak.png"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Margin="5"/>
+                </StackPanel>
             </Grid>
 
             <!-- Toolbar Row -->
@@ -187,13 +210,20 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- ImSalione Logo -->
-                <Grid Grid.Column="0">
-                    <Image Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\imsalione.png" 
-                       HorizontalAlignment="Left"
-                       MouseLeftButtonDown="Image_MouseLeftButtonDown"
-                       VerticalAlignment="Stretch"
-                       Margin="10"/>
-                </Grid>
+                <StackPanel Margin="5, 0, 0, 0" 
+                            Grid.Column="0" Width="40" 
+                            Height="40" 
+                            HorizontalAlignment="Left">
+                    <Button Background="Transparent"
+                            BorderBrush="Transparent"
+                            x:Name="btnImsalione"                            
+                            BorderThickness="0">
+                        <Image Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\imsalione.png" 
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Margin="5"/>
+                    </Button>
+                </StackPanel>
 
                 <!-- Date Time -->
                 <Grid Grid.Column="2">

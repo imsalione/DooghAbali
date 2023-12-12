@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,26 @@ namespace DooghAbali
         public Order()
         {
             InitializeComponent();
+        }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string websiteLink = "https://www.imsalione.ir";
+
+            Process.Start(new ProcessStartInfo(websiteLink) { UseShellExecute = true });
+        }
+
+        private void datetime_Loaded(object sender, RoutedEventArgs e)
+        {
+            datetime.Text = DateTime.Now.ToString("dddd، dd MMMM yyyy");
         }
     }
 }

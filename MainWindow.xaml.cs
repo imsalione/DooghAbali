@@ -18,8 +18,8 @@ namespace DooghAbali
     /// </summary>
     public partial class MainWindow : Window
     {
-        private bool isMouseCaptured;
-        private double offsetX, offsetY;
+        private SolidColorBrush hoverColor = new SolidColorBrush(Colors.LightGray);
+        private SolidColorBrush normalColor = new SolidColorBrush(Colors.Gray);
 
         public MainWindow()
         {
@@ -45,47 +45,19 @@ namespace DooghAbali
             }
         }
 
-        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void btnOrder_Click(object sender, RoutedEventArgs e)
+        {
+            Order order = new Order();
+            order.Show();
+
+            this.Close();
+        }
+
+        private void btnImsalione_Click(object sender, RoutedEventArgs e)
         {
             string websiteLink = "https://www.imsalione.ir";
 
             Process.Start(new ProcessStartInfo(websiteLink) { UseShellExecute = true });
-        }
-
-        private void dragBorder_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseCaptured)
-            {
-                // جابجایی فرم به موقعیت جدید موس
-                Point position = e.GetPosition(this);
-                Left = position.X - offsetX;
-                Top = position.Y - offsetY;
-            }
-        }
-
-        private void dragBorder_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            if (isMouseCaptured)
-            {
-                // آزاد کردن موس
-                dragBorder.ReleaseMouseCapture();
-                isMouseCaptured = false;
-            }
-        }
-
-        private void dragBorder_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (!isMouseCaptured)
-            {
-                // نگه‌داشتن موس توسط فرم
-                dragBorder.CaptureMouse();
-                isMouseCaptured = true;
-
-                // محاسبه افست موس نسبت به ابتدای فرم
-                Point position = e.GetPosition(this);
-                offsetX = position.X - Left;
-                offsetY = position.Y - Top;
-            }
         }
     }
 }
