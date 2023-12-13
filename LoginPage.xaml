@@ -9,10 +9,7 @@
         Title="صفحه اصلی" Height="450" Width="800"
         FlowDirection="LeftToRight"
         Icon="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\database.png"
-        WindowStyle="None"
-        AllowsTransparency="True"
-        Background="{x:Null}"
-        ResizeMode="NoResize">
+        Style="{StaticResource FormStyle}">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -56,7 +53,6 @@
         Foreground="DarkOrange"/>
 
         <!--Login Button-->
-
         <Button x:Name="btnLogin"
                 Click="btnLogin_Click"
                 Content="ورود"
