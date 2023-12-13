@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- تعریف استایل برای فرم‌ها با گوشه‌های گرد و پس‌زمینه عکس -->
+    <Style TargetType="Window">
+        <Setter Property="Window.Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="5">
+                        <Grid>
+                            <!-- اضافه کردن پس‌زمینه با استفاده از ImageBrush -->
+                            <Grid.Background>
+                                <ImageBrush ImageSource="\Images\background"/>
+                            </Grid.Background>
+
+                            <ContentPresenter/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- سایر تنظیمات و استایل‌های ظاهری مورد نیاز -->
+
+</ResourceDictionary>

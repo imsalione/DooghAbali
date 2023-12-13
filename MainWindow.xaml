@@ -14,52 +14,54 @@
         Background="{x:Null}"
         ResizeMode="NoResize">
 
-    <Border CornerRadius="5"
-            x:Name="dragBorder"
-            BorderBrush="Black"
-            Background="#00afef"
-            BorderThickness="0">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceDictionary/FormsTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
 
 
-        <Grid Margin="10">
-            <!-- Window Row -->
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
+    <Grid Margin="10">
+        <!-- Window Row -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
 
-            <!-- Title Row -->
-            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+        <!-- Title Row -->
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- First Column -->
+            <Grid Grid.Column="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="120"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- First Column -->
-                <Grid Grid.Column="2">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <StackPanel Grid.Column="2" Margin="5">
-                        <Image x:Name="exit"
+                <StackPanel Grid.Column="2" Margin="5">
+                    <Image x:Name="exit"
                                 MouseLeftButtonDown="exit_MouseLeftButtonDown"
                                 ToolTip="خروج از برنامه"
                                 Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\shutdown.png"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="1" Margin="5">
-                        <Image x:Name="setting"
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="5">
+                    <Image x:Name="setting"
                             ToolTip="تنظیمات"
                             Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\Account Setting.png"/>
-                    </StackPanel>
-                </Grid>
+                </StackPanel>
+            </Grid>
 
-                <!-- Second Column -->
-                <TextBlock
+            <!-- Second Column -->
+            <TextBlock
                 Grid.Column="1"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
@@ -69,35 +71,35 @@
                 FontWeight="ExtraBold"
                 FontFamily="IRANSansWeb(FaNum)"/>
 
-                <!-- Third Column -->
+            <!-- Third Column -->
 
 
-            </Grid>
+        </Grid>
 
-            <!-- Body Row -->
-            <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+        <!-- Body Row -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-                <Border CornerRadius="5"
+            <Border CornerRadius="5"
                         x:Name="btnSubmitBorder"
                         Grid.Column="1"
                         Grid.Row="1"
                         BorderBrush="White"
                         Margin="5"
                         BorderThickness="1">
-                    <Button Background="Transparent"
+                <Button Background="Transparent"
                             BorderBrush="Transparent"
                             x:Name="btnOrder"
                             BorderThickness="0"
@@ -106,61 +108,61 @@
                             FontSize="15"
                             Foreground="GhostWhite"
                             Click="btnOrder_Click">
-                    </Button>
-                </Border>
+                </Button>
+            </Border>
 
-                <Border CornerRadius="5"
+            <Border CornerRadius="5"
                         x:Name="btnForceBorder"
                         Grid.Column="1"
                         Grid.Row="2"
                         BorderBrush="White"
                         Margin="5"
                         BorderThickness="1">
-                    <Button Background="Transparent"
+                <Button Background="Transparent"
                             BorderBrush="Transparent"
                             BorderThickness="0"
                             Content="لیست مشتریان"
                             FontFamily="IRANSansWeb(FaNum)"
                             FontSize="15"
                             Foreground="GhostWhite">
-                    </Button>
-                </Border>
+                </Button>
+            </Border>
 
-                <Border CornerRadius="5"
+            <Border CornerRadius="5"
                         x:Name="btnCustomerBorder"
                         Grid.Column="1"
                         Grid.Row="3"
                         BorderBrush="White"
                         Margin="5"
                         BorderThickness="1">
-                    <Button Background="Transparent"
+                <Button Background="Transparent"
                             BorderBrush="Transparent"
                             BorderThickness="0"
                             Content="محصولات"
                             FontFamily="IRANSansWeb(FaNum)"
                             FontSize="15"
                             Foreground="GhostWhite">
-                    </Button>
-                </Border>
+                </Button>
+            </Border>
 
-                <Border CornerRadius="5"
+            <Border CornerRadius="5"
                         x:Name="btnProductBorder"
                         Grid.Column="1"
                         Grid.Row="4"
                         BorderBrush="White"
                         Margin="5"
                         BorderThickness="1">
-                    <Button Background="Transparent"
+                <Button Background="Transparent"
                             BorderBrush="Transparent"
                             BorderThickness="0"
                             Content="گزارش فروش"
                             FontFamily="IRANSansWeb(FaNum)"
                             FontSize="15"
                             Foreground="GhostWhite">
-                    </Button>
-                </Border>
+                </Button>
+            </Border>
 
-                <TextBlock
+            <TextBlock
                     Grid.Row="5"
                     Grid.Column="1"
                     FlowDirection="RightToLeft"
@@ -170,7 +172,7 @@
                     FontFamily="IRANSansWeb(FaNum)"
                     FontSize="14"
                     Foreground="GhostWhite"/>
-                <TextBlock
+            <TextBlock
                     Grid.Row="5"
                     Grid.Column="2"
                     FlowDirection="RightToLeft"
@@ -180,7 +182,7 @@
                     FontFamily="IRANSansWeb(FaNum)"
                     FontSize="14"
                     Foreground="GhostWhite"/>
-                <TextBlock
+            <TextBlock
                     Grid.Row="5"
                     Grid.Column="0"
                     FlowDirection="RightToLeft"
@@ -191,43 +193,43 @@
                     FontSize="14"
                     Foreground="GhostWhite"/>
 
-                <StackPanel Grid.Row="2" Margin="20" Grid.Column="0" Grid.RowSpan="4">
-                    <Image Source="\Images\tashtak.png"
+            <StackPanel Grid.Row="2" Margin="20" Grid.Column="0" Grid.RowSpan="4">
+                <Image Source="\Images\tashtak.png"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            Margin="5"/>
-                </StackPanel>
-            </Grid>
+            </StackPanel>
+        </Grid>
 
-            <!-- Toolbar Row -->
-            <Border Grid.Row="2" Opacity="0.6" CornerRadius="5" Background="White" BorderBrush="White" BorderThickness="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
+        <!-- Toolbar Row -->
+        <Border Grid.Row="2" Opacity="0.6" CornerRadius="5" Background="White" BorderBrush="White" BorderThickness="1" Margin="5,5,5,5" Grid.ColumnSpan="2"/>
 
-            <Grid Grid.Row="2" Grid.ColumnSpan="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="150"/>
-                </Grid.ColumnDefinitions>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
 
-                <!-- ImSalione Logo -->
-                <StackPanel Margin="5, 0, 0, 0" 
+            <!-- ImSalione Logo -->
+            <StackPanel Margin="5, 0, 0, 0" 
                             Grid.Column="0" Width="40" 
                             Height="40" 
                             HorizontalAlignment="Left">
-                    <Button Background="Transparent"
+                <Button Background="Transparent"
                             BorderBrush="Transparent"
                             x:Name="btnImsalione"                            
                             BorderThickness="0">
-                        <Image Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\imsalione.png" 
+                    <Image Source="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\imsalione.png" 
                                HorizontalAlignment="Left"
                                VerticalAlignment="Center"
                                Margin="5"/>
-                    </Button>
-                </StackPanel>
+                </Button>
+            </StackPanel>
 
-                <!-- Date Time -->
-                <Grid Grid.Column="2">
-                    <TextBlock 
+            <!-- Date Time -->
+            <Grid Grid.Column="2">
+                <TextBlock 
                     x:Name="datetime"
                     Foreground="Black"
                     FontFamily="IRANSansWeb(FaNum)"
@@ -236,9 +238,8 @@
                     Text="Date"
                     Loaded="datetime_Loaded"
                     Margin="10"/>
-                </Grid>
-
             </Grid>
+
         </Grid>
-    </Border>
+    </Grid>
 </Window>

@@ -14,81 +14,56 @@
         Background="{x:Null}"
         ResizeMode="NoResize">
 
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="\ResourceDictionary\FormsTheme.xaml"/>
+                <ResourceDictionary Source="/ResourceDictionary/ButtonTheme.xaml"/>
+                <ResourceDictionary Source="\ResourceDictionary\PasswordBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="330"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-    <Border CornerRadius="5"
-            x:Name="dragBorder"
-            BorderBrush="Black"
-            BorderThickness="0">
+        <!--Login TextBox-->
+        <PasswordBox x:Name="txtLogin"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Style="{DynamicResource PasswordBox}"
+                     IsTabStop="True"
+                     TabIndex="0">
+        </PasswordBox>
 
-        <Border.Background>
-            <ImageBrush ImageSource="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\background2.png"
-                        Stretch="Fill"/>
-        </Border.Background>
+        <TextBlock 
+        x:Name="txtAttention"
+        Grid.Column="1"
+        Grid.Row="3"
+        FontFamily="IRANSansWeb(FaNum)"
+        TextAlignment="Center"
+        FontSize="13"
+        Foreground="DarkOrange"/>
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="330"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <!--Login Button-->
 
-            <!--Login TextBox-->
-            <Border CornerRadius="5"
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        BorderBrush="White"
-                        Margin="5"
-                        BorderThickness="1">
-                <PasswordBox Background="Transparent"
-                                BorderBrush="Transparent"
-                         x:Name="txtLogin"
-                         BorderThickness="0"
-                         FontFamily="IRANSansWeb(FaNum)"
-                         FontSize="15"
-                         HorizontalContentAlignment="Center"
-                             VerticalContentAlignment="Center"
-                         PasswordChar="●"
-                         Foreground="GhostWhite"
-                         MaxLength="6"
-                         TabIndex="0">
-                </PasswordBox>
-            </Border>
-
-            <TextBlock 
-                x:Name="txtAttention"
+        <Button x:Name="btnLogin"
+                Click="btnLogin_Click"
+                Content="ورود"
                 Grid.Column="1"
-                Grid.Row="3"
-                FontFamily="IRANSansWeb(FaNum)"
-                TextAlignment="Center"
-                FontSize="13"
-                Foreground="DarkOrange"/>
+                Grid.Row="2"
+                Style="{DynamicResource RoundButtonStyle}">
+        </Button>
 
-            <!--Login Button-->
-            <Border CornerRadius="5"
-                        x:Name="btnSubmitBorder"
-                        Grid.Column="1"
-                        Grid.Row="2"
-                        BorderBrush="White"
-                        Margin="5"
-                        BorderThickness="1">
-                <Button Background="White"
-                        BorderBrush="Transparent"
-                        BorderThickness="0"
-                        Content="ورود"
-                        FontFamily="IRANSansWeb(FaNum)"
-                        FontSize="15"
-                        Click="Button_Click"
-                        Foreground="#4383c4">
-                </Button>
-            </Border>
-        </Grid>
-        
-    </Border>
+    </Grid>
 </Window>

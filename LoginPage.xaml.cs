@@ -24,7 +24,7 @@ namespace DooghAbali
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             if (txtLogin.Password == "123456")
             {
@@ -43,7 +43,6 @@ namespace DooghAbali
                     txtAttention.Text = "رمز ورود اشتباه است";
                 }
             }
-            
         }
     }
 }
