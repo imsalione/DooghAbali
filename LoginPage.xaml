@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DooghAbali"
         mc:Ignorable="d"
+        Title="ورود به برنامه" Height="450" Width="800"
         WindowStartupLocation="CenterScreen"
-        Title="صفحه اصلی" Height="450" Width="800"
-        FlowDirection="LeftToRight"
-        Icon="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\database.png"
-        Style="{StaticResource FormStyle}">
+        WindowStyle="SingleBorderWindow"
+        Background="#00afef"
+        ResizeMode="CanMinimize"
+        Icon="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\database.png">
 
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="\ResourceDictionary\FormsTheme.xaml"/>
                 <ResourceDictionary Source="/ResourceDictionary/ButtonTheme.xaml"/>
                 <ResourceDictionary Source="\ResourceDictionary\PasswordBox.xaml"/>
             </ResourceDictionary.MergedDictionaries>
@@ -23,7 +23,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="330"/>
+            <RowDefinition Height="320"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>

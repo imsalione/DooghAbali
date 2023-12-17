@@ -10,14 +10,12 @@
         FlowDirection="LeftToRight"
         Icon="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\database.png"
         WindowStyle="None"
-        AllowsTransparency="True"
-        Background="{x:Null}"
-        ResizeMode="NoResize">
+        Background="#00afef"
+        ResizeMode="CanMinimize">
 
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/ResourceDictionary/FormsTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
