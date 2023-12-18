@@ -26,7 +26,9 @@ namespace DooghAbali
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (txtLogin.Password == "123456")
+            pswLogin.Password = "8080";
+            string pswEntered = pswLogin.Password;
+            if (pswEntered == "8080")
             {
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
@@ -36,13 +38,35 @@ namespace DooghAbali
             }
             else
             {
-                for (int i = 0; i < 3; i++)
-                {
-                    txtLogin.SelectAll();
-                    txtLogin.Focus();
-                    txtAttention.Text = "رمز ورود اشتباه است";
-                }
+                pswLogin.SelectAll();
+                pswLogin.Focus();
+                txtAttention.Text = "رمز ورود اشتباه است!";
             }
+        }
+
+        private void pswLogin_GotFocus(object sender, RoutedEventArgs e)
+        {
+            PasswordBox passwordBox = (PasswordBox)sender;
+            if (passwordBox.Password == "رمز عبور را وارد کنید...")
+            {
+                passwordBox.Password = "";
+                passwordBox.Foreground = System.Windows.Media.Brushes.Black; // تغییر رنگ متن به سیاه
+            }
+        }
+
+        private void pswLogin_LostFocus(object sender, RoutedEventArgs e)
+        {
+            PasswordBox passwordBox = (PasswordBox)sender;
+            if (string.IsNullOrWhiteSpace(passwordBox.Password))
+            {
+                passwordBox.Password = "Enter password here...";
+                passwordBox.Foreground = System.Windows.Media.Brushes.Gray; // تغییر رنگ متن به خاکستری
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            pswLogin.Focus();
         }
     }
 }

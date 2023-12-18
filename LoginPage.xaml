@@ -10,6 +10,7 @@
         WindowStyle="SingleBorderWindow"
         Background="#00afef"
         ResizeMode="CanMinimize"
+        Loaded="Window_Loaded"
         Icon="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\database.png">
 
     <Window.Resources>
@@ -23,7 +24,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="320"/>
+            <RowDefinition Height="300"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
@@ -35,22 +36,24 @@
         </Grid.ColumnDefinitions>
 
         <!--Login TextBox-->
-        <PasswordBox x:Name="txtLogin"
+        <PasswordBox x:Name="pswLogin"
                      Grid.Row="1"
                      Grid.Column="1"
-                     Style="{DynamicResource PasswordBox}"
+                     GotFocus="pswLogin_GotFocus"
+                     LostFocus="pswLogin_LostFocus"
+                     Style="{StaticResource PasswordBox}"
                      IsTabStop="True"
                      TabIndex="0">
         </PasswordBox>
 
-        <TextBlock 
-        x:Name="txtAttention"
-        Grid.Column="1"
-        Grid.Row="3"
-        FontFamily="IRANSansWeb(FaNum)"
-        TextAlignment="Center"
-        FontSize="13"
-        Foreground="DarkOrange"/>
+        <TextBlock x:Name="txtAttention"
+                   Grid.Column="1"
+                   Grid.Row="3"
+                   FontFamily="IRANSansWeb(FaNum)"
+                   TextAlignment="Center"
+                   FontSize="11"
+                   FlowDirection="RightToLeft"
+                   Foreground="White"/>
 
         <!--Login Button-->
         <Button x:Name="btnLogin"
@@ -58,7 +61,7 @@
                 Content="ورود"
                 Grid.Column="1"
                 Grid.Row="2"
-                Style="{DynamicResource RoundButtonStyle}">
+                Style="{StaticResource RoundButtonStyle}">
         </Button>
 
     </Grid>

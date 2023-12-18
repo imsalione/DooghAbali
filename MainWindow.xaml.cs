@@ -18,9 +18,6 @@ namespace DooghAbali
     /// </summary>
     public partial class MainWindow : Window
     {
-        private SolidColorBrush hoverColor = new SolidColorBrush(Colors.LightGray);
-        private SolidColorBrush normalColor = new SolidColorBrush(Colors.Gray);
-
         public MainWindow()
         {
             InitializeComponent();
@@ -29,20 +26,6 @@ namespace DooghAbali
         private void datetime_Loaded(object sender, RoutedEventArgs e)
         {
             datetime.Text = DateTime.Now.ToString("dddd، dd MMMM yyyy");
-        }
-
-        private void exit_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBoxResult result = MessageBox.Show("آیا می‌خواهید از برنامه خارج شوید؟", "توجه!", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-            if (result == MessageBoxResult.Yes)
-            {
-                Application.Current.Shutdown();
-            }
-            else
-            {
-
-            }
         }
 
         private void btnOrder_Click(object sender, RoutedEventArgs e)
