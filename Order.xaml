@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DooghAbali"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="ثبت سفارش" Height="450" Width="800"
+        Title="ثبت سفارش" Height="650" Width="1000"
         FlowDirection="LeftToRight"
         Icon="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\database.png"
         WindowStyle="SingleBorderWindow"
@@ -68,25 +68,37 @@
 
         <!-- Body Row -->
         <Grid Grid.Row="1" Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="250"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="3"
-                   Content="شناسه سفارش:"
-                   Style="{StaticResource Lable}"/>
+            <Border Grid.Row="0"
+                    CornerRadius="5"
+                    Background="White"
+                    Margin="5"
+                    Opacity="0.7">
+                <GroupBox Header="اطلاعات مشتری"
+                          FlowDirection="RightToLeft"
+                          Margin="5">
+                    
+                </GroupBox>
+            </Border>
+
+            <Border Grid.Row="1"
+                    CornerRadius="5"
+                    Background="White"
+                    Margin="5"
+                    Opacity="0.7">
+                <GroupBox Header="لیست سفارشات"
+                          FlowDirection="RightToLeft"
+                          Margin="5">
+
+                </GroupBox>
+            </Border>
+
+
         </Grid>
 
         <!-- Toolbar Row -->
