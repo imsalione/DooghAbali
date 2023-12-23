@@ -11,6 +11,7 @@
         Icon="D:\Uni\Bachelor Degree\Term 3\آز مهندسی نرم افزار\DooghAbali\Images\database.png"
         WindowStyle="SingleBorderWindow"
         Background="#00afef"
+        Loaded="Window_Loaded"
         ResizeMode="CanMinimize">
 
 
@@ -67,31 +68,123 @@
         </Grid>
 
         <!-- Body Row -->
-        <Grid Grid.Row="1" Margin="10">
+        <Grid Grid.Row="1" Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="250"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
+            
+            <!--Customer Info-->
             <Border Grid.Row="0"
                     CornerRadius="5"
                     Background="White"
                     Margin="5"
-                    Opacity="0.7">
+                    Opacity="0.6">
                 <GroupBox Header="اطلاعات مشتری"
+                          FontWeight="Bold"
+                          FontFamily="IRANSansWeb(FaNum)"
+                          FontSize="14"
                           FlowDirection="RightToLeft"
                           Margin="5">
-                    
+
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="2"
+                               Content="کد نمایندگی" 
+                               Padding="1"
+                               FontSize="11"
+                               HorizontalAlignment="Center"/>
+                        <ComboBox Grid.Column="2"
+                                  Name="cmbIdCustomer"
+                                  Margin="3"
+                                  Width="250"
+                                  FontWeight="Light"
+                                  FontSize="11"
+                                  TabIndex="0"
+                                  VerticalAlignment="Bottom"/>
+
+                        <Label Grid.Column="0"
+                               Content="استان" 
+                               Padding="1" 
+                               FontSize="11"
+                               HorizontalAlignment="Center"/>
+                        <ComboBox Grid.Column="0"
+                                  x:Name="cmbState"
+                                  Margin="3"
+                                  Width="250"
+                                  FontWeight="Light"
+                                  FontSize="11"
+                                  TabIndex="1"
+                                  SelectionChanged="cmbState_SelectionChanged"
+                                  VerticalAlignment="Bottom">
+                        </ComboBox>
+
+                        <Label Grid.Column="1"
+                               Content="شهر" 
+                               Padding="1" 
+                               FontSize="11"
+                               HorizontalAlignment="Center"/>
+                        <ComboBox Grid.Column="1"
+                                  x:Name="cmbCity"
+                                  Margin="3"
+                                  Width="250"
+                                  FontWeight="Light"
+                                  FontSize="11"
+                                  TabIndex="2"
+                                  VerticalAlignment="Bottom"
+                                  SelectionChanged="cmbCity_SelectionChanged"/>
+                    </Grid>
                 </GroupBox>
             </Border>
-
+            
+            <!--Order Info-->
             <Border Grid.Row="1"
                     CornerRadius="5"
                     Background="White"
                     Margin="5"
-                    Opacity="0.7">
+                    Opacity="0.6">
                 <GroupBox Header="لیست سفارشات"
+                          FontWeight="Bold"
+                          FontFamily="IRANSansWeb(FaNum)"
+                          FontSize="14"
+                          FlowDirection="RightToLeft"
+                          Margin="5">
+
+                    <DataGrid x:Name="dataGridProducts"
+                              AutoGenerateColumns="False" 
+                              GridLinesVisibility="All" 
+                              FontSize="11"
+                              HorizontalGridLinesBrush="LightGray" 
+                              VerticalGridLinesBrush="LightGray"
+                              Margin="10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="کد محصول" Binding="{Binding ProductId}"/>
+                            <DataGridTextColumn Header="دسته بندی محصول" Binding="{Binding ProductCategory}"/>
+                            <DataGridTextColumn Header="عنوان محصول" Binding="{Binding Title}"/>
+                            <DataGridTextColumn Header="تعداد سفارش" Binding="{Binding Count}"/>
+                            <DataGridTextColumn Header="قیمت واحد" Binding="{Binding Price}"/>
+                            <DataGridTextColumn Header="توضیحات محصول" Binding="{Binding Description}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    
+                </GroupBox>
+            </Border>
+
+            <Border Grid.Row="2"
+                    CornerRadius="5"
+                    Background="White"
+                    Margin="5"
+                    Opacity="0.6">
+                <GroupBox Header="ثبت سفارش"
+                          FontWeight="Bold"
+                          FontFamily="IRANSansWeb(FaNum)"
+                          FontSize="14"
                           FlowDirection="RightToLeft"
                           Margin="5">
 
